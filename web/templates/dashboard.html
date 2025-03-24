@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCG OSINT Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="MCG Logo" class="logo">
+        <h1>MCG OSINT TOOL</h1>
+        <p>by Mera Cyber Gondia</p>
+    </header>
+
+    <main>
+        <h2>Run OSINT Investigation</h2>
+        <form action="{{ url_for('scan') }}" method="POST">
+            <label for="target">Target Input (Domain / IP / Email / URL):</label>
+            <input type="text" id="target" name="target" placeholder="example.com / someone@mail.com" required>
+
+            <label for="module">Select Module:</label>
+            <select id="module" name="module" required>
+                <option value="whois_lookup">WHOIS Lookup</option>
+                <option value="email_verify">Email Verification</option>
+                <option value="ip_geo">IP Geolocation</option>
+                <option value="social_scan">Social Media Scan</option>
+                <option value="breach_check">Breach Data Check</option>
+                <option value="shodan_scan">Shodan Scan</option>
+                <option value="subdomain_enum">Subdomain Enumeration</option>
+                <option value="reverse_image">Reverse Image Search</option>
+                <option value="exif_extractor">Metadata / EXIF Extractor</option>
+            </select>
+
+            <button type="submit">Scan Now</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Developed by MCG Team - Kali Linux OSINT Framework</p>
+    </footer>
+</body>
+</html>

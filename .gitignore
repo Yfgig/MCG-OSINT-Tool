@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Reports
+reports/*.pdf
+reports/*.html
+reports/*.txt
+
+# Sensitive configs (optional, if needed)
+cli/api_keys.py
+
+# Logs (optional)
+*.log
+
+# IDE specific
+.vscode/
+.idea/
+
+# Python environment & pip cache
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.env
