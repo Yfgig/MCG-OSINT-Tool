@@ -4,32 +4,34 @@ echo "======================================="
 echo "    Installing MCG OSINT Tool"
 echo "======================================="
 
-# Step 1: Create virtual environment
+# Check if python3-venv is installed
+if ! dpkg -s python3-venv &> /dev/null; then
+    echo "[+] Installing python3-venv package..."
+    sudo apt install python3-venv -y
+fi
+
 echo "[+] Creating Python virtual environment..."
 python3 -m venv venv
 
-# Step 2: Activate virtualenv and install dependencies
+echo "[+] Activating virtual environment..."
 source venv/bin/activate
 
-echo "[+] Installing dependencies..."
+echo "[+] Installing dependencies inside venv..."
 pip install --upgrade pip
-pip install -r cli/requirements.txt
-pip install -r web/requirements.txt
+pip install -r requirements.txt
 
-# Step 3: Make start.sh executable
-chmod +x start.sh
+# Detect if user is root or non-root
+if [ "$EUID" -eq 0 ]; then
+    BASHRC_PATH="/root/.bashrc"
+else
+    BASHRC_PATH="$HOME/.bashrc"
+fi
 
-# Step 4: Add global alias
-echo "[+] Adding global alias 'mcgtool'..."
-echo "alias mcgtool='$(pwd)/start.sh'" >> ~/.bashrc
-source ~/.bashrc
-
-echo "[+] Installation complete!"
-echo "You can now run the tool using: mcgtool cli or mcgtool web"
-
-# Step 5: Optional - Create reports directory if missing
-mkdir -p reports
+echo "[+] Adding global alias 'mcgtool' for user..."
+echo "alias mcgtool='bash $(pwd)/start.sh'" >> $BASHRC_PATH
+source $BASHRC_PATH
 
 echo "======================================="
 echo "      MCG OSINT Tool Ready"
 echo "======================================="
+echo "You can now run the tool using: mcgtool cli"

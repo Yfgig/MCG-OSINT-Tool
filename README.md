@@ -1,83 +1,141 @@
-# MCG OSINT TOOL
+---
 
-Developed by Mera Cyber Gondia
+MCG OSINT Tool (CLI Version)
 
-A modular and automated OSINT (Open Source Intelligence) investigation framework with both CLI and Web UI. Designed for investigators, cybersecurity enthusiasts, and analysts running on Kali Linux or other Linux distros.
+MCG OSINT Tool is an advanced Open Source Intelligence (OSINT) framework designed for investigators, security professionals, and researchers. This tool provides powerful modules to collect intelligence on emails, IPs, domains, and social media through an easy-to-use CLI interface.
 
-## Features
 
-- CLI & Web Interface (localhost dashboard)
-- Automated reports with graph (connecting dots visualization)
-- Export reports as PDF, HTML, and TXT
-- Modular OSINT scans (WHOIS, Email Verification, IP Geolocation, Social Media Scan, and more)
-- Dark-themed, fully functional web dashboard
-- Customizable logo (top-middle of web UI)
-- Auto-update script
-- Bash installer with global alias (mcgtool)
+---
 
-## Modules Included
+Features
 
-- WHOIS Lookup
-- Email Verification
-- IP Geolocation
-- Social Media Scan
-- Breach Data Check
-- Shodan Scan
-- Subdomain Enumeration
-- Reverse Image Search
-- Metadata / EXIF Extractor
+WHOIS Lookup
 
-## Installation
+Email Verification
 
-git clone https://github.com/yourusername/mcg-osint-tool.git
-cd mcg-osint-tool
-chmod +x installer.sh
-./installer.sh
+IP Geolocation
 
-## Usage
+Social Media Scanner
 
-CLI Mode:
+Breach Data Check
+
+Shodan Scan
+
+Reverse Image Search
+
+Metadata (EXIF) Extraction
+
+Subdomain Enumeration
+
+Auto-generated PDF/HTML/TXT reports
+
+Dark-themed CLI output
+
+Auto-update support via updater.py
+
+
+
+---
+
+Prerequisites
+
+Before running the tool, ensure you have the following installed on your system:
+
+Python 3.8+
+
+python3-venv
+
+Git
+
+Kali Linux or any Debian-based distribution
+
+Internet Connection (for API-based modules like Shodan, HaveIBeenPwned, etc.)
+
+
+To install essential dependencies on Kali/Debian:
+
+sudo apt update
+sudo apt install python3 python3-venv git -y
+
+
+---
+
+Installation
+
+git clone https://github.com/Yfgig/MCG-OSINT-Tool.git
+cd MCG-OSINT-Tool
+bash installer.sh
+
+This will:
+
+Create a virtual environment.
+
+Install required dependencies.
+
+Set up a global alias mcgtool for easy access.
+
+
+
+---
+
+Usage
+
 mcgtool cli
 
-Web Mode (localhost dashboard):
-mcgtool web
+Select a module from the CLI dashboard to start an OSINT investigation.
 
-Access it on: http://127.0.0.1:5000
 
-## Auto-Updater
+---
+
+Update Tool
+
+To pull the latest version and dependencies:
+
 python3 updater.py
 
-## Directory Structure
 
-MCG-OSINT-TOOL/
+---
+
+File Structure
+
+MCG-OSINT-Tool/
 ├── cli/
 │   ├── main.py
-│   ├── modules/
-│   └── api_keys.py
-├── web/
-│   ├── app.py
-│   ├── graph_builder.py
-│   ├── report_engine.py
-│   ├── templates/
-│   └── static/
+│   └── modules/
+│       ├── breach_check.py
+│       ├── email_verify.py
+│       ├── exif_extractor.py
+│       ├── ip_geo.py
+│       ├── reverse_image.py
+│       ├── shodan_scan.py
+│       ├── social_scan.py
+│       ├── subdomain_enum.py
+│       └── whois_lookup.py
 ├── reports/
-├── settings.py
-├── start.sh
 ├── installer.sh
-├── updater.py
 ├── requirements.txt
-├── LICENSE
-└── .gitignore
+├── start.sh
+├── updater.py
+├── settings.py
+├── .gitignore
+└── README.md
 
-## Notes
 
-- Compatible with Python 3.x
-- Designed for Kali Linux, but works on most Unix-like systems.
-- Reports will be saved inside the /reports directory.
+---
 
-## Credits
-Developed by Mera Cyber Gondia Team.
+Notes
 
-## License
+Only for Kali Linux/Debian-based distros (tested).
+
+Make sure python3-venv is installed (auto-installed via installer.sh).
+
+CLI-only version, web interface removed.
+
+
+
+---
+
+License
+
 MIT License
 

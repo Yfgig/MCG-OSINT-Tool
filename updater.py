@@ -17,10 +17,9 @@ def update_tool():
         print("[+] Fetching latest updates from remote...")
         subprocess.check_call(["git", "pull"])
 
-        # Update Python dependencies if needed
-        print("[+] Updating dependencies...")
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "-r", "cli/requirements.txt"])
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "-r", "web/requirements.txt"])
+        # Update Python dependencies for CLI only
+        print("[+] Updating dependencies for CLI...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "-r", "requirements.txt"])
 
         print("[✓] MCG OSINT Tool is up to date!")
     except subprocess.CalledProcessError as e:

@@ -1,0 +1,9 @@
+requests
+python-whois
+email-validator
+geoip2
+shodan
+pillow
+exifread
+beautifulsoup4
+dnspython

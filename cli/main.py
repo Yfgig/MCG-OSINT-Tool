@@ -12,6 +12,14 @@ def banner():
 ╚═╝     ╚═╝ ╚═════╝  ╚═════╝ 
          MCG OSINT TOOL
     by Mera Cyber Gondia
+
+Follow both on instagram and share feedback
+INSTAGRAM: @Krishdhurve104 (main account)
+           @mera_cyber_gondia
+
+
+EMAIL : Meracybergondia@proton.me
+
 """)
 
 def menu():
