@@ -1,3 +1,4 @@
+![1000058855](https://github.com/user-attachments/assets/7f739d31-c531-47fb-9378-8d819e54f85b)
 ---
 
 MCG OSINT Tool (CLI Version)
@@ -63,8 +64,14 @@ sudo apt install python3 python3-venv git -y
 Installation
 
 git clone https://github.com/Yfgig/MCG-OSINT-Tool.git
+
 cd MCG-OSINT-Tool
+
 bash installer.sh
+
+OR
+
+./installer.sh
 
 This will:
 
@@ -99,25 +106,46 @@ python3 updater.py
 File Structure
 
 MCG-OSINT-Tool/
+
 ├── cli/
+
 │   ├── main.py
+
 │   └── modules/
+
 │       ├── breach_check.py
+
 │       ├── email_verify.py
+
 │       ├── exif_extractor.py
+
 │       ├── ip_geo.py
+
 │       ├── reverse_image.py
+
 │       ├── shodan_scan.py
+
 │       ├── social_scan.py
+
 │       ├── subdomain_enum.py
+
 │       └── whois_lookup.py
+
 ├── reports/
+
 ├── installer.sh
+
 ├── requirements.txt
+
 ├── start.sh
+
 ├── updater.py
+
 ├── settings.py
+
 ├── .gitignore
+
+
 └── README.md
 
 
