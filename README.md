@@ -56,6 +56,7 @@ Internet Connection (for API-based modules like Shodan, HaveIBeenPwned, etc.)
 To install essential dependencies on Kali/Debian:
 
 sudo apt update
+
 sudo apt install python3 python3-venv git -y
 
 
@@ -144,7 +145,6 @@ MCG-OSINT-Tool/
 ├── settings.py
 
 ├── .gitignore
-
 
 └── README.md
 
