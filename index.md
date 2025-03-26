@@ -1,6 +1,8 @@
 ---
 layout: default
 title: MCG OSINT Tool
+head:
+- <meta name="google-site-verification" content="aH00AOAySOe_VTqnptSGv2Mrs4uVkdZXZajs9fEZ0bs" />
 ---
 
 # Welcome to MCG OSINT Tool 🚀  
