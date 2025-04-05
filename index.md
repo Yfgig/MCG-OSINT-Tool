@@ -1,54 +1,34 @@
 
 ---
 
-layout: default title: MCG OSINT Tool
+title: MCG OSINT Tool layout: default
 
 MCG OSINT Tool
 
-Welcome to the MCG OSINT Tool – an advanced and modular Open Source Intelligence (OSINT) tool designed for ethical hackers, cybersecurity professionals, and investigative analysts.
+> An all-in-one Open Source Intelligence (OSINT) investigation toolkit for investigators, cybersecurity researchers, and ethical hackers.
 
-
----
-
-Features
-
-CLI-Based Modular Framework
-
-Automated Data Collection
-
-Interactive Report Generation
-
-Clean & Documented Codebase
-
-Easy Installation via Installer Script
-
-Auto-Update Support
 
 
 
 ---
 
-Available Modules
+Key Features
 
-Username Scanner
+Command-Line Interface (CLI) for fast and powerful OSINT investigations.
 
-Email Verification
+Modular Structure – Easily extend and add new modules.
 
-IP Geolocation
+Automatic Report Generation (PDF, HTML, TXT).
 
-WHOIS Lookup
+Graph-based Visualization to connect dots between data points.
 
-Subdomain Enumeration
+Reverse Image Search and EXIF Metadata Extraction.
 
-Social Media Scanner
+Social Media Username Scanner and Breach Data Checker.
 
-Breached Data Checker
+IP Geolocation, WHOIS Lookup, Email Verifier, and more.
 
-Shodan Scanner
-
-Reverse Image Search
-
-Metadata Analyzer
+Easy Installer Script and Global Alias Setup (mcgtool).
 
 
 
@@ -58,64 +38,76 @@ Installation
 
 git clone https://github.com/Yfgig/MCG-OSINT-Tool.git
 cd MCG-OSINT-Tool
-chmod +x installer.sh
-./installer.sh
+bash installer.sh
 
-To start the tool:
+Once installed, launch the tool via:
 
 mcgtool cli
 
 
 ---
 
-File Structure
+Modules Included
+
+Social Media Scanner
+
+Email Breach Checker
+
+Reverse Image Search
+
+Metadata Analyzer (EXIF)
+
+IP Geolocation
+
+Subdomain Enumerator
+
+WHOIS Lookup
+
+Email Verification
+
+Shodan Host Info Fetcher
+
+
+
+---
+
+Tool Directory Structure
 
 MCG-OSINT-Tool/
 ├── cli/
 │   └── modules/
 ├── reports/
-├── start.sh
 ├── installer.sh
-├── updater.py
-├── settings.py
+├── start.sh
 ├── requirements.txt
+├── settings.py
+├── updater.py
 ├── README.md
-└── .gitignore
+└── index.md
 
 
 ---
 
-Updates
+Credits
 
-Stay updated with the latest features using:
-
-python3 updater.py
+Developed with passion by @Yfgig. Contributions, ideas, and stars are welcome!
 
 
 ---
 
-Author
+Live Project
 
-Maintained by @Yfgig
-Instagram: @mera_cyber_gondia
+View the tool’s documentation and updates on GitHub Pages:
 
-
----
-
-GitHub Pages
-
-Project is live at: https://yfgig.github.io/MCG-OSINT-Tool/
+MCG OSINT Tool Website
 
 
 ---
 
-Disclaimer
+License
 
-This tool is made for educational and ethical use only. Misuse may lead to consequences. Always take proper authorization before running any scan.
+This project is licensed under the MIT License.
 
 
 ---
-
-Thank you for using MCG OSINT Tool!
-
 
